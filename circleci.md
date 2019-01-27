@@ -32,7 +32,7 @@ jobs:
           command: sleep 1
       - run:
           name: rake rspec:spring ./spec/
-          command: docker-compose exec web rails 
+          command: docker-compose exec web rake rspec:spring ./spec/ 
       - run:
           name: docker-compose down
           command: docker-compose down
